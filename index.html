@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title></title>
+    <style type="text/css" media="all">
+        .poppins-thin {
+            font-family: "Poppins", sans-serif;
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        .poppins-extralight {
+            font-family: "Poppins", sans-serif;
+            font-weight: 200;
+            font-style: normal;
+        }
+
+        .poppins-light {
+            font-family: "Poppins", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        .poppins-regular {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .poppins-medium {
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        .poppins-semibold {
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        .poppins-bold {
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .poppins-extrabold {
+            font-family: "Poppins", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+        }
+
+        .poppins-black {
+            font-family: "Poppins", sans-serif;
+            font-weight: 900;
+            font-style: normal;
+        }
+
+        .poppins-thin-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 100;
+            font-style: italic;
+        }
+
+        .poppins-extralight-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 200;
+            font-style: italic;
+        }
+
+        .poppins-light-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        .poppins-regular-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .poppins-medium-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        .poppins-semibold-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        .poppins-bold-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-style: italic;
+        }
+
+        .poppins-extrabold-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 800;
+            font-style: italic;
+        }
+
+        .poppins-black-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 900;
+            font-style: italic;
+        }
+        /* From Uiverse.io by mrhyddenn */
+        .button {
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            appearance: none;
+            border: none;
+            background: none;
+            color: #0f1923;
+            cursor: pointer;
+            position: relative;
+            padding: 8px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 14px;
+            transition: all .15s ease;
+        }
+
+        .button::before,
+        .button::after {
+            content: '';
+            display: block;
+            position: absolute;
+            right: 0;
+            left: 0;
+            height: calc(50% - 5px);
+            border: px solid #7D8082;
+            transition: all .15s ease;
+        }
+
+        .button::before {
+            top: 0;
+            border-bottom-width: 0;
+        }
+
+        .button::after {
+            bottom: 0;
+            border-top-width: 0;
+        }
+
+        .button:active,
+        .button:focus {
+            outline: none;
+        }
+
+        .button:active::before,
+        .button:active::after {
+            right: 1px;
+            left: 1px;
+        }
+
+        .button:active::before {
+            top: 1px;
+        }
+
+        .button:active::after {
+            bottom: 1px;
+        }
+
+        .button_lg {
+            position: relative;
+            display: block;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #0f1923;
+            overflow: hidden;
+            box-shadow: inset 0px 0px 0px 1px transparent;
+        }
+
+        .button_lg::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 2px;
+            height: 2px;
+            background-color: #0f1923;
+        }
+
+        .button_lg::after {
+            content: '';
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 4px;
+            height: 4px;
+            background-color: #0f1923;
+            transition: all .2s ease;
+        }
+
+        .button_sl {
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: -1px;
+            left: -8px;
+            width: 0;
+            background-color: #ff4655;
+            transform: skew(-15deg);
+            transition: all .2s ease;
+        }
+
+        .button_text {
+            position: relative;
+        }
+
+        .button:hover {
+            color: #0f1923;
+        }
+
+        .button:hover .button_sl {
+            width: calc(100% + 15px);
+        }
+
+        .button:hover .button_lg::after {
+            background-color: #fff;
+        }
+        /* From Uiverse.io by neerajbaniwal */
+        .btn-shine {
+
+            transform:;
+            padding: 12px 48px;
+            color:;
+            background: linear-gradient(to right, #9f9f9f 0, #fff 10%, #868686 20%);
+            background-position: 0;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 3s infinite linear;
+            animation-fill-mode: forwards;
+            -webkit-text-size-adjust: none;
+            margin-top: 50px;
+            font-size: 40px;
+            text-decoration: none;
+            white-space: nowrap;
+            font-family: "Poppins", sans-serif;
+        }
+@-moz-keyframes shine {
+            0% {
+                background-position: 0;
+            }
+            60% {
+                background-position: 180px;
+            }
+            100% {
+                background-position: 180px;
+            }
+        }
+@-webkit-keyframes shine {
+            0% {
+                background-position: 0;
+            }
+            60% {
+                background-position: 180px;
+            }
+            100% {
+                background-position: 180px;
+            }
+        }
+@-o-keyframes shine {
+            0% {
+                background-position: 0;
+            }
+            60% {
+                background-position: 180px;
+            }
+            100% {
+                background-position: 180px;
+            }
+        }
+@keyframes shine {
+            0% {
+                background-position: 0;
+            }
+            60% {
+                background-position: 180px;
+            }
+            100% {
+                background-position: 180px;
+            }
+        }
+
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-950">
+    <div class="text-rose-700 w-full flex items-center justify-center">
+        <!-- From Uiverse.io by neerajbaniwal -->
+        <a class="btn-shine poppins-extrabold">PINKISH</a>
+
+    </div>
+    <div class="poppins-bold grid grid-cols-2 gap-2 px-4 bg-slate-950  pt-10">
+        
+        
+        
+        
+        <div class="card shadow-lg sm:max-w-sm bg-gray-800 p-2 rounded-md">
+            <figure class="rounded-md overflow-hidden"><img src="https://cdn.flyonui.com/fy-assets/components/card/image-9.png" alt="Watch" /></figure>
+            <div class="card-body">
+                <h5 class="text-lg card-title mt-3 mb-2 text-white text-center">POST 01</h5>
+
+                <div class="card-actions flex w-full items-center justify-center">
+                    <!-- From Uiverse.io by mrhyddenn -->
+                    <a href="https://tinyurl.com/6bab37j8" class="button">
+                        <span class="button_lg">
+                            <span class="button_sl"></span>
+                            <span class="button_text">Download</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
