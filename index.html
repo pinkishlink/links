@@ -301,75 +301,59 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-<body class="bg-slate-950">
-    <div class="text-rose-700 w-full flex items-center justify-center">
-        <!-- From Uiverse.io by neerajbaniwal -->
-        <a class="btn-shine poppins-extrabold">PINKISH</a>
-
+<body class="bg-slate-950 poppins-extrabold">
+    <div class="text-rose-700 w-full flex items-center justify-center py-5">
+        <a class="text-4xl font-extrabold btn-shine">PINKISH</a>
     </div>
-    <div class="poppins-bold grid grid-cols-2 gap-2 px-4 bg-slate-950  pt-10">
 
-
-
-
-        <!-- POST 03-->
-        <!-- POST 03-->
-        <div class="card shadow-lg sm:max-w-sm bg-gray-800 p-2 rounded-md">
-            <figure class="rounded-md overflow-hidden">
-                <img src="https://raw.githubusercontent.com/pinkishlink/links/refs/heads/main/IMG_20250328_105650.jpg" alt="Watch" /></figure>
-            <div class="card-body">
-                <h5 class="text-lg card-title mt-3 mb-2 text-white text-center">POST 03</h5>
-
-                <div class="card-actions flex w-full items-center justify-center">
-                    <!-- From Uiverse.io by mrhyddenn -->
-                    <a target="_blank" href="https://tinyurl.com/pinkishlink03" class="button">
-                        <span class="button_lg">
-                            <span class="button_sl"></span>
-                            <span class="button_text">Download</span>
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- POST 02-->
-        <!-- POST 02-->
-        <div class="card shadow-lg sm:max-w-sm bg-gray-800 p-2 rounded-md">
-            <figure class="rounded-md overflow-hidden"><img src="https://raw.githubusercontent.com/pinkishlink/links/d14d610aef249f8da68d39862ab029b35f06e3ea/IMG_20250327_225707.jpg" alt="Watch" /></figure>
-            <div class="card-body">
-                <h5 class="text-lg card-title mt-3 mb-2 text-white text-center">POST 02</h5>
-
-                <div class="card-actions flex w-full items-center justify-center">
-                    <!-- From Uiverse.io by mrhyddenn -->
-                    <a target="_blank" href="https://tinyurl.com/e2sm29ja" class="button">
-                        <span class="button_lg">
-                            <span class="button_sl"></span>
-                            <span class="button_text">Download</span>
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </div>
-        
-        <!-- POST 01-->
-        <!-- POST 01-->
-        <div class="card shadow-lg sm:max-w-sm bg-gray-800 p-2 rounded-md">
-            <figure class="rounded-md overflow-hidden"><img src="https://raw.githubusercontent.com/pinkishlink/links/d14d610aef249f8da68d39862ab029b35f06e3ea/IMG_20250327_225707.jpg" alt="Watch" /></figure>
-            <div class="card-body">
-                <h5 class="text-lg card-title mt-3 mb-2 text-white text-center">POST 01</h5>
-
-                <div class="card-actions flex w-full items-center justify-center">
-                    <!-- From Uiverse.io by mrhyddenn -->
-                    <a target="_blank" href="https://tinyurl.com/6bab37j8" class="button">
-                        <span class="button_lg">
-                            <span class="button_sl"></span>
-                            <span class="button_text">Download</span>
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </div>
-
+    <div id="postsContainer" class="grid grid-cols-2 gap-4 px-4 bg-slate-950 pt-5">
+        <!-- Posts will be dynamically inserted here -->
     </div>
+
+    <script>
+        // Post Data Array
+        const posts = [{
+            title: "POST 01",
+            img: "https://raw.githubusercontent.com/pinkishlink/links/refs/heads/main/images/img1.jpg",
+            link: "https://tinyurl.com/6bab37j8"
+        },
+            {
+                title: "POST 02",
+                img: "https://raw.githubusercontent.com/pinkishlink/links/refs/heads/main/images/img2.jpg",
+                link: "https://tinyurl.com/e2sm29ja"
+            },
+            {
+                title: "POST 03",
+                img: "https://raw.githubusercontent.com/pinkishlink/links/refs/heads/main/images/img3.jpg",
+                link: "https://tinyurl.com/pinkishlink03"
+            }];
+
+        // Get the container
+        const container = document.getElementById("postsContainer");
+
+        // Loop through posts and create HTML
+        posts.reverse().forEach(post => {
+            const postHTML = `
+            <!-- POST 00-->
+            <div class="card shadow-lg sm:max-w-sm bg-gray-800 p-2 rounded-md">
+            <figure class="rounded-md overflow-hidden"><img src="${post.img}" alt="Watch" /></figure>
+            <div class="card-body">
+            <h5 class="text-lg card-title mt-3 mb-2 text-white text-center font-extrabold">${post.title}</h5>
+
+            <div class="card-actions flex w-full items-center justify-center">
+            <!-- From Uiverse.io by mrhyddenn -->
+            <a target="_blank" href="${post.link}" class="button">
+            <span class="button_lg">
+            <span class="button_sl"></span>
+            <span class="button_text">Download</span>
+            </span>
+            </a>
+            </div>
+            </div>
+            </div>
+            `;
+            container.innerHTML += postHTML;
+        });
+    </script>
 </body>
 </html>
